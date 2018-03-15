@@ -56,7 +56,7 @@ class InteractiveRecord
     values = attribute.values[0]
     attr = attribute.keys[0]
     binding.pry
-    sql = "SELECT * FROM #{self.table_name}, WHERE #{self.column_names} = values"
+    sql = "SELECT * FROM #{self.table_name}, WHERE #{attribute.keys.first} = #{attribute.values.first}"
   end
 
 end
